@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a56" />
+  <meta name="description" content="Create an editable review draft for your real experience at Avinash Computer And Ray Choice Center." />
+  <title>Smart Review Studio | Ray Choice Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Ray Choice Center home">
+      <span class="brand-mark">RC<span>C</span></span>
+      <span class="brand-copy"><strong>RAY CHOICE CENTER</strong><small>SMART REVIEW STUDIO</small></span>
+    </a>
+    <a class="top-link" href="https://share.google/nNoDRVCpfRqQ371BC" target="_blank" rel="noopener">View Business ↗</a>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-badge"><span class="live-dot"></span> FREE • NO API KEY REQUIRED</div>
+      <h1>Turn your real experience<br><span>into a thoughtful review.</span></h1>
+      <p>Choose the service you used, add a few details, and create an editable review draft in your preferred language.</p>
+      <div class="hero-points"><span>✓ Different wording each time</span><span>✓ Copy in one click</span><span>✓ Mobile friendly</span></div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel form-panel">
+        <div class="panel-heading">
+          <div><span class="step">STEP 01</span><h2>Tell us about your visit</h2></div>
+          <span class="heading-icon">✦</span>
+        </div>
+        <form id="reviewForm">
+          <label for="service">Which service did you use? <em>*</em></label>
+          <select id="service" required>
+            <option value="general">CSC / Digital Seva Center</option>
+            <option value="pan">PAN Card Service</option>
+            <option value="aadhaar">Aadhaar Print / Assistance</option>
+            <option value="voter">Voter ID Assistance</option>
+            <option value="banking">Banking / AEPS Service</option>
+            <option value="pension">Pension / Scholarship Application</option>
+            <option value="labour">e-Shram / Labour Card</option>
+            <option value="certificate">Income / Domicile Certificate Assistance</option>
+            <option value="pmkisan">PM-Kisan / Farmer Service</option>
+            <option value="printing">Printing / Typing / Online Form</option>
+            <option value="recharge">Bill Payment / Recharge</option>
+            <option value="other">Other service</option>
+          </select>
+
+          <div class="two-col">
+            <div>
+              <label for="language">Review language</label>
+              <select id="language">
+                <option value="hinglish">Hinglish (Hindi + English)</option>
+                <option value="hindi">हिंदी</option>
+                <option value="english">English</option>
+              </select>
+            </div>
+            <div>
+              <label for="length">Draft length</label>
+              <select id="length">
+                <option value="short">Short</option>
+                <option value="medium" selected>Balanced</option>
+                <option value="long">Detailed</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="experience">What was your actual experience? <span class="optional">Optional but recommended</span></label>
+          <textarea id="experience" maxlength="260" placeholder="Example: The staff explained the form clearly and helped me submit it."></textarea>
+          <div class="field-note"><span>Use only details that are true for your visit.</span><span id="charCount">0 / 260</span></div>
+
+          <label for="highlight">What would you like to mention?</label>
+          <select id="highlight">
+            <option value="none">Let the draft focus on my experience</option>
+            <option value="helpful">Helpful guidance</option>
+            <option value="clear">Clear explanation</option>
+            <option value="quick">Quick service (if accurate)</option>
+            <option value="convenient">Convenient online service support</option>
+            <option value="polite">Polite communication</option>
+          </select>
+
+          <button class="primary-btn" type="submit"><span>✦</span> Generate Review Draft <span class="btn-arrow">→</span></button>
+          <p class="privacy-note">No account or API key needed. Your draft is generated in this browser; this page does not submit a review for you.</p>
+        </form>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-heading">
+          <div><span class="step">STEP 02</span><h2>Your review draft</h2></div>
+          <span class="draft-tag">EDITABLE</span>
+        </div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-illustration"><span>✎</span><i></i><b></b></div>
+          <h3>Your draft will appear here</h3>
+          <p>Select a service and click <strong>Generate Review Draft</strong>. You can edit the result before copying.</p>
+        </div>
+        <div id="resultArea" class="result-area hidden">
+          <div class="result-meta"><span class="sparkle">✦</span><span id="variantLabel">Fresh wording generated</span><span class="word-count" id="wordCount">0 words</span></div>
+          <textarea id="reviewOutput" aria-label="Editable review draft" spellcheck="true"></textarea>
+          <div class="result-actions">
+            <button class="secondary-btn" id="regenerateBtn" type="button">↻ Try different wording</button>
+            <button class="copy-btn" id="copyBtn" type="button">▣ Copy review</button>
+          </div>
+          <div id="copyStatus" class="status" role="status" aria-live="polite"></div>
+          <div class="google-card">
+            <div class="google-icon">G</div>
+            <div class="google-copy"><strong>Ready to share your experience?</strong><small>Review the text, make sure it is accurate, then open Google.</small></div>
+            <a id="googleReviewBtn" href="https://g.page/r/CfdqDy-6tQGOEBM/review" target="_blank" rel="noopener">Open review page ↗</a>
+          </div>
+          <div class="honesty-note"><strong>Keep it genuine</strong><span>Only post a review if you visited or used the service. Edit or remove any sentence that does not reflect your own experience. Google may ask you to paste the copied text yourself.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="trust-icon">◎</div><div><strong>Made for Avinash Computer And Ray Choice Center</strong><p>Useful review drafts for real customer experiences — no fake reviews, auto-posting, or paid API.</p></div>
+      <a href="https://g.page/r/CfdqDy-6tQGOEBM/review" target="_blank" rel="noopener">Google Review Link ↗</a>
+    </section>
+    <footer><span>© <span id="year"></span> Ray Choice Center</span><span>Free browser-based tool · Your words, your experience</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
