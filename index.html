@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123c75">
+  <meta name="description" content="Ray Choice Center Smart Review Studio — create and edit a review draft based on your real customer experience.">
+  <title>Ray Choice Center | CSC Smart Review Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="utility-bar">
+    <span><i class="status-dot"></i> DIGITAL SEVA • CUSTOMER REVIEW ASSISTANT</span>
+    <a href="https://share.google/nNoDRVCpfRqQ371BC" target="_blank" rel="noopener">View Business Profile ↗</a>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Ray Choice Center">
+      <span class="brand-logo"><b>R</b><b>C</b><small>CSC</small></span>
+      <span class="brand-text"><strong>RAY CHOICE CENTER</strong><small>AVINASH COMPUTER & DIGITAL SEVA</small></span>
+    </a>
+    <div class="header-chip"><span class="shield">✓</span> FREE SMART TOOL</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> SMART REVIEW STUDIO</div>
+        <h1>Apna experience likhein.<br><span>Review easily share karein.</span></h1>
+        <p>Apni use ki hui service select karein, apna real experience batayein aur review draft banayein. Copy karte hi aapka Google Review page khul jayega.</p>
+        <div class="hero-pills"><span>✓ Hindi • Hinglish • English</span><span>✓ Editable review</span><span>✓ No API key needed</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-top"><span class="mini-logo">RCC</span><span class="live-label"><i></i> READY TO USE</span></div>
+        <div class="hero-stars">★★★★★</div>
+        <strong>Customer Voice Matters</strong>
+        <p>Genuine feedback helps local services improve and helps other customers make informed choices.</p>
+        <div class="hero-card-foot"><span>CSC & Digital Seva</span><span>✦</span></div>
+      </div>
+    </section>
+
+    <div class="section-title"><div><span class="section-kicker">REVIEW BUILDER</span><h2>Create your review draft</h2></div><span class="free-badge">100% FREE</span></div>
+
+    <section class="builder">
+      <div class="panel form-panel">
+        <div class="panel-title"><span class="step-icon">01</span><div><h3>Service details</h3><p>Wahi service select karein jo aapne use ki hai.</p></div></div>
+        <form id="reviewForm">
+          <label for="service">Aapne kaunsi service li thi? <b>*</b></label>
+          <select id="service" required>
+            <option value="general">CSC / Digital Seva Center</option>
+            <option value="pan">PAN Card Service</option>
+            <option value="aadhaar">Aadhaar Print / Assistance</option>
+            <option value="voter">Voter ID / Voter Card</option>
+            <option value="banking">Banking / AEPS Service</option>
+            <option value="pension">Pension / Scholarship Form</option>
+            <option value="labour">e-Shram / Labour Card</option>
+            <option value="certificate">Income / Domicile Certificate</option>
+            <option value="pmkisan">PM-Kisan / Farmer Service</option>
+            <option value="printing">Printing / Typing / Online Form</option>
+            <option value="recharge">Bill Payment / Mobile Recharge</option>
+            <option value="other">Other Service</option>
+          </select>
+
+          <div class="two-col">
+            <div><label for="language">Review ki language</label>
+              <select id="language"><option value="hinglish">Hinglish (Recommended)</option><option value="hindi">Hindi</option><option value="english">English</option></select>
+            </div>
+            <div><label for="length">Review ki length</label>
+              <select id="length"><option value="short">Short</option><option value="medium" selected>Medium</option><option value="long">Detailed</option></select>
+            </div>
+          </div>
+
+          <label for="experience">Aapka actual experience <span class="optional">Optional</span></label>
+          <textarea id="experience" maxlength="240" placeholder="Example: Form bharne ka process clearly samjhaya aur meri query solve ki."></textarea>
+          <div class="field-note"><span>Sirf apne real experience ki baat likhein.</span><span id="charCount">0/240</span></div>
+
+          <label for="highlight">Kis baat ka mention karna hai?</label>
+          <select id="highlight">
+            <option value="auto">Mere experience ke hisaab se draft banayein</option>
+            <option value="helpful">Helpful guidance</option>
+            <option value="clear">Process clearly samjhaya</option>
+            <option value="quick">Quick service (agar sach ho)</option>
+            <option value="convenient">Local online service support</option>
+            <option value="polite">Polite communication</option>
+          </select>
+          <button class="generate-btn" type="submit"><span>✦</span> Generate Review <b>→</b></button>
+          <div class="small-note"><span>🔒</span> Draft isi browser mein generate hota hai. Aapka review automatically post nahi hota.</div>
+        </form>
+      </div>
+
+      <div class="panel result-panel">
+        <div class="panel-title result-title"><span class="step-icon gold">02</span><div><h3>Your review draft</h3><p>Copy karne se pehle review ko check aur edit kar sakte hain.</p></div><span class="edit-tag">EDITABLE</span></div>
+        <div id="emptyState" class="empty-state">
+          <div class="document-art"><span>✎</span><i></i><i></i><i></i></div>
+          <h3>Review yahan dikhega</h3>
+          <p>Left side se service select karke <b>Generate Review</b> par click karein.</p>
+        </div>
+        <div id="resultArea" class="result-area hidden">
+          <div class="draft-toolbar"><span><i></i> REVIEW DRAFT</span><span id="wordCount">0 words</span></div>
+          <textarea id="reviewOutput" aria-label="Editable review text" spellcheck="true"></textarea>
+          <div class="edit-hint">✎ Text box mein click karke words, spelling aur apna experience edit kar sakte hain.</div>
+          <div class="action-row">
+            <button type="button" id="regenerateBtn" class="again-btn">↻ New wording</button>
+            <button type="button" id="copyBtn" class="copy-btn">▣ Copy & Open Google</button>
+          </div>
+          <div id="copyStatus" class="copy-status" role="status" aria-live="polite"></div>
+          <div class="google-destination">
+            <div class="google-g">G</div><div class="destination-copy"><strong>Google Review Page</strong><small>Copy ke baad review page open hoga. Google par text paste karke submit karein.</small></div>
+            <a href="https://g.page/r/CfdqDy-6tQGOEBM/review" target="_blank" rel="noopener">Open ↗</a>
+          </div>
+          <div class="truth-note"><b>Honest review reminder</b><span>Review sirf apne genuine experience ke baare mein post karein. Koi sentence sahi na lage to use edit ya delete kar dein.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="business-strip">
+      <div class="business-icon">RCC</div><div><strong>Avinash Computer And Ray Choice Center</strong><p>CSC • Digital Seva • Online Forms • Banking Assistance</p></div>
+      <a href="https://g.page/r/CfdqDy-6tQGOEBM/review" target="_blank" rel="noopener">Google Review Link ↗</a>
+    </section>
+    <footer><span>© <span id="year"></span> Ray Choice Center</span><span>Smart Review Studio · Free browser-based tool</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
